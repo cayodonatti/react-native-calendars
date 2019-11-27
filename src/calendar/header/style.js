@@ -7,19 +7,18 @@ export default function(theme={}) {
   const appStyle = {...defaultStyle, ...theme};
   return StyleSheet.create({
     header: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
+      // flexDirection: 'row',
+      // justifyContent: 'space-between',
       paddingLeft: 10,
       paddingRight: 10,
       marginTop: 6,
-      alignItems: 'center'
+      alignItems: 'flex-start',
     },
     monthText: {
-      fontSize: appStyle.textMonthFontSize,
-      fontFamily: appStyle.textMonthFontFamily,
-      fontWeight: appStyle.textMonthFontWeight,
-      color: appStyle.monthTextColor,
-      margin: 10
+      fontSize: 20,
+      fontFamily: 'Poppins-SemiBold',
+      color: '#001033',
+      alignSelf: 'flex-start'
     },
     arrow: {
       padding: 10,
@@ -45,10 +44,9 @@ export default function(theme={}) {
       marginBottom: 7,
       width: 32,
       textAlign: 'center',
-      fontSize: appStyle.textDayHeaderFontSize,
-      fontFamily: appStyle.textDayHeaderFontFamily,
-      fontWeight: appStyle.textDayHeaderFontWeight,
-      color: appStyle.textSectionTitleColor
+      fontSize: 12,
+      fontFamily: 'Poppins-Medium',
+      color: '#333333',
     },
     ...(theme[STYLESHEET_ID] || {})
   });

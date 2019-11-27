@@ -3,7 +3,7 @@ import * as defaultStyle from '../../../style';
 
 const STYLESHEET_ID = 'stylesheet.day.period';
 
-const FILLER_HEIGHT = 34;
+const FILLER_HEIGHT = 42;
 
 export default function styleConstructor(theme={}) {
   const appStyle = {...defaultStyle, ...theme};
@@ -35,12 +35,13 @@ export default function styleConstructor(theme={}) {
       flex: 1
     },
     text: {
-      marginTop: 7,
-      fontSize: appStyle.textDayFontSize,
-      fontFamily: appStyle.textDayFontFamily,
+      marginTop: 11,
+      fontSize: 14,
+      fontFamily: 'Poppins-Medium',
       fontWeight: appStyle.textDayFontWeight,
       color: appStyle.dayTextColor || '#2d4150',
-      backgroundColor: 'rgba(255, 255, 255, 0)'
+      backgroundColor: 'rgba(255, 255, 255, 0)',
+      alignSelf: 'center'
     },
     today: {
       backgroundColor: appStyle.todayBackgroundColor

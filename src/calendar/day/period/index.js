@@ -12,7 +12,7 @@ import styleConstructor from './style';
 
 class Day extends Component {
   static displayName = 'IGNORE';
-  
+
   static propTypes = {
     // TODO: selected + disabled props should be removed
     state: PropTypes.oneOf(['selected', 'disabled', 'today', '']),
@@ -183,6 +183,13 @@ class Day extends Component {
           backgroundColor: flags.endingDay.color
         });
       }
+
+      containerStyle.push({
+        borderTopLeftRadius: 8,
+        borderBottomLeftRadius: 8,
+        borderTopRightRadius: 8,
+        borderBottomRightRadius: 8,
+      })
 
       fillers = (
         <View style={[this.style.fillers, fillerStyle]}>
