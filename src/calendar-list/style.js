@@ -26,8 +26,7 @@ export default function getStyle(theme = {}) {
     },
     calendar: {
       paddingLeft: 15,
-      paddingRight: 15,
-      marginBottom: 50
+      paddingRight: 15
     },
     staticHeader: {
       position: 'absolute',
